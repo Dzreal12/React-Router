@@ -1,0 +1,108 @@
+/*Navigation Bar*/
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #2F4F4F;
+    display: flex;
+    flex-direction: row;
+  }
+
+/*Logo*/  
+  .navbar .leftSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 130px;
+  }
+  
+  .navbar .leftSide img {
+    width: 70px;
+  }
+
+/*Main Bar*/  
+  .navbar .rightSide {
+    flex: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    color: #DAA520;
+    text-decoration: none;
+    margin: 25px;
+  }
+  
+  .navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: #DAA520;
+    cursor: pointer;
+  }
+  
+  .navbar .rightSide svg {
+    font-size: 30px;
+  }
+  
+  .navbar #open {
+    padding-left: 0px;
+  }
+  .navbar #open img {
+    display: none;
+  }
+  
+  .navbar #close img {
+    display: inherit;
+  }
+
+/*Button*/  
+  .navbar #open .hiddenLinks {
+    display: inherit;
+    margin-left: 30px;
+  }
+  
+  .navbar #close .hiddenLinks {
+    display: none;
+  }
+  
+  .navbar #open a {
+    width: 65px;
+    margin: 5px;
+  }
+
+/*Mobile Navigation Bar*/  
+  @media only screen and (max-width: 900px) {
+    .navbar .rightSide a {
+      width: 65px;
+    }
+    .navbar .leftSide {
+      padding-left: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .navbar .rightSide a {
+      display: none;
+    }
+  
+    .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .navbar .rightSide button {
+      display: inherit;
+    }
+  }
+  
+  @media only screen and (min-width: 650px) {
+    .navbar .rightSide button {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+  }
